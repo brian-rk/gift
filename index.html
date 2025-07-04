@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .heart {
+            animation: heartbeat 1.5s infinite;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            75% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .photo-gallery {
+            scrollbar-width: none;
+        }
+        .photo-gallery::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-pink-50 font-sans">
+    <!-- Navigation -->
+    <nav class="bg-pink-600 text-white p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold">
+                <i class="fas fa-heart mr-2"></i>
+                For You
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-pink-200 transition">Home</a>
+                <a href="#message" class="hover:text-pink-200 transition">Message</a>
+                <a href="#memories" class="hover:text-pink-200 transition">Memories</a>
+                <a href="#music" class="hover:text-pink-200 transition">Our Song</a>
+            </div>
+            <button class="md:hidden text-2xl" id="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-pink-700 w-full absolute left-0 mt-2" id="mobile-menu">
+            <div class="flex flex-col p-4 space-y-3">
+                <a href="#home" class="hover:text-pink-200 transition">Home</a>
+                <a href="#message" class="hover:text-pink-200 transition">Message</a>
+                <a href="#memories" class="hover:text-pink-200 transition">Memories</a>
+                <a href="#music" class="hover:text-pink-200 transition">Our Song</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-b from-pink-500 to-pink-300 text-white">
+        <div class="text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                To The Best Girl <span class="heart text-red-500">♥</span> In The World
+            </h1>
+            <p class="text-xl md:text-2xl mb-8">I love you </p>
+        </div>
+    </section>
+
+</body>
+</html>
